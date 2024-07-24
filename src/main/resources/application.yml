@@ -1,0 +1,10 @@
+# 기본 profile -> local
+spring:
+  profiles:
+    default: local
+
+  datasource:
+    url: jdbc:h2:mem:~/dev
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
