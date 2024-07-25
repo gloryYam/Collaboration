@@ -18,7 +18,7 @@ public class MemberService {
     private void emailDuplicateCheck(String email) {
         memberRepository.findByEmail(email)
             .ifPresent(memberEmail -> {
-                throw new EmailDuplicateException()
+                throw new EmailDuplicateException();
             });
     }
 }
