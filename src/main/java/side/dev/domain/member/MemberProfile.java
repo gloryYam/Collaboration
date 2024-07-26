@@ -1,4 +1,4 @@
-package side.dev.domain.user;
+package side.dev.domain.member;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class UserProfile {
+public class MemberProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,5 +19,5 @@ public class UserProfile {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")
-    private User user;
+    private Member member;
 }

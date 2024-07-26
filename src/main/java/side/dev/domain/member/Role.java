@@ -1,4 +1,4 @@
-package side.dev.domain.user;
+package side.dev.domain.member;
 
 import lombok.Getter;
 
