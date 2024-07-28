@@ -37,4 +37,8 @@ public class Member extends BaseEntity {
         this.password = password;
         this.role = role;
     }
+
+    public static Member of(String name, String email, String password, Role role) {
+        return new Member(name, email, password, role);
+    }
 }

@@ -73,6 +73,7 @@ class MemberRepositoryTest {
     }
 
 
+
     public Member createUser(String name, String email, String password, Role role) {
         return Member.builder()
             .name(name)
