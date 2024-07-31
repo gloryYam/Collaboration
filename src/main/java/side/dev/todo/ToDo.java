@@ -3,6 +3,12 @@ package side.dev.todo;
 public class ToDo {
 
     /**
+     *  2024 .07 .31 (수)
+     * 구현한 MemberController 테스트 코드 작성하기..
+     * 전역 예외 처리 테스트 코드 작성하기..
+     */
+
+    /**
      *  2024 .07 .25 (목)
      * 노트북 네트워크 이슈...
      * 예외 처리 구현

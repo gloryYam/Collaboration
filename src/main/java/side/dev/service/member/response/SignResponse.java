@@ -1,4 +1,4 @@
-package side.dev.api.service.member.response;
+package side.dev.service.member.response;
 
 import lombok.Builder;
 import lombok.Getter;

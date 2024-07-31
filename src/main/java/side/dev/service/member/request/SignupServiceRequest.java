@@ -1,4 +1,4 @@
-package side.dev.api.service.member.request;
+package side.dev.service.member.request;
 
 import lombok.Builder;
 import lombok.Getter;

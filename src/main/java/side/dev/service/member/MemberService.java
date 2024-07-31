@@ -1,9 +1,9 @@
-package side.dev.api.service.member;
+package side.dev.service.member;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import side.dev.api.service.member.request.SignupServiceRequest;
-import side.dev.api.service.member.response.SignResponse;
+import side.dev.service.member.request.SignupServiceRequest;
+import side.dev.service.member.response.SignResponse;
 import side.dev.common.exception.DuplicateEmailException;
 import side.dev.domain.member.Member;
 import side.dev.repository.user.MemberRepository;
@@ -14,7 +14,9 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    // 회원가입
+    /**
+     *  회원가입
+     */
     public SignResponse signup(SignupServiceRequest request) {
         emailDuplicateCheck(request.getEmail());
 
@@ -27,7 +29,7 @@ public class MemberService {
         return SignResponse.of(saveMember);
     }
 
-    // 이메일 중복 체크
+
     private void emailDuplicateCheck(String email) {
         memberRepository.findByEmail(email)
             .ifPresent(memberEmail -> {
