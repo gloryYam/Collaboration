@@ -16,7 +16,7 @@ import static side.dev.common.enumType.ErrorCode.DUPLICATED_EMAIL;
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(value = { ConstraintViolationException.class, DataIntegrityViolationException.class})
+    @ExceptionHandler(value = { ConstraintViolationException.class, DataIntegrityViolationException.class })
     protected ResponseEntity<ErrorResponse> handleDataException() {
         log.error("handleDataException throw Exception : {}", DUPLICATED_EMAIL);
         return ErrorResponse.toResponseEntity(DUPLICATED_EMAIL);

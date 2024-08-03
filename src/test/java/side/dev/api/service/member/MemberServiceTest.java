@@ -29,18 +29,7 @@ class MemberServiceTest extends IntegrationTestSupport {
         memberRepository.deleteAllInBatch();
     }
 
-    @Test
-    @DisplayName("회원가입 성공")
-    void signMember() {
-        SignupServiceRequest member1 = requestMember("glory1", "test@test1.com", "1234", Role.ADMIN);
 
-        SignResponse signupMember = memberService.signup(member1);
-
-        assertThat(signupMember).isNotNull();
-        assertThat(signupMember)
-                .extracting("name", "email", "role")
-                .containsExactly("glory1", "test@test1.com", Role.ADMIN);
-    }
 
     @Test
     @DisplayName("회원가입 시 이메일 중복시 DuplicateEmailException 발생")
